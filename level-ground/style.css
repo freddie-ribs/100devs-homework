@@ -77,6 +77,7 @@ select {
 :root {
   --dark-gray: #66768a;
   --light-gray: #dbdfe2;
+  --footer-clr: #161f2a;
 }
 
 html {
@@ -238,6 +239,7 @@ h2 {
   padding: 0 1rem;
   padding-bottom: 1rem;
   max-width: fit-content;
+  font-weight: 500;
 }
 
 .btn-large {
@@ -250,6 +252,100 @@ h2 {
   margin: 1rem auto 2rem auto;
   padding: 0.5rem 2rem;
   font-weight: 500;
+}
+
+footer {
+  width: 100vw;
+  background-color: var(--footer-clr);
+  color: white;
+  padding: 2rem 4rem;
+}
+
+.social-container {
+  /* border: 1px solid blue; */
+  float: left;
+}
+
+.social-logos {
+  font-size: 26px;
+}
+
+.social-logos a {
+  text-decoration: none;
+  color: white;
+  /* padding: 0 0.5rem; */
+}
+
+.social-logos a:nth-of-type(2) {
+  padding: 0 1rem;
+}
+
+h5 {
+  color: var(--dark-gray);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+aside div {
+  margin-bottom: 0.5rem;
+}
+
+aside:nth-of-type(2) {
+  margin-bottom: 1rem;
+}
+
+aside a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.site-map > a {
+  float: left;
+}
+
+.site-map a:last-of-type {
+  float: right;
+}
+
+.info-container {
+  /* border: 1px solid red; */
+  float: right;
+}
+
+.school h5 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+}
+
+.address p {
+  color: gray;
+  line-height: 1.2;
+}
+
+address {
+  font-style: normal;
+}
+
+.divider {
+  clear: both;
+  border: 1px solid var(--light-gray);
+  margin-bottom: 1rem;
+}
+
+.disclaimer-container {
+  position: relative;
+}
+
+.logo-2 {
+  height: 30px;
+  width: 30px;
+  float: right;
+  position: absolute;
+  top: -10px;
+  right: 0;
 }
 
 @media screen and (max-width: 1100px) {
