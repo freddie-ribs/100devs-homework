@@ -115,7 +115,7 @@ header {
 }
 
 h2 {
-  width: fit-content;
+  max-width: fit-content;
   margin: 1.5rem auto 1.5rem auto;
   font-size: 30px;
   color: var(--clr-dark);
@@ -183,7 +183,12 @@ aside:last-of-type p {
   display: none;
 }
 
-@media only screen and (min-width: 901px) and (max-width: 1500px) {
+@media only screen and (min-width: 901px) {
+  .container {
+    max-width: 1601px;
+    margin: 0 auto;
+  }
+
   header {
     position: static;
   }
@@ -195,7 +200,7 @@ aside:last-of-type p {
   .nav {
     display: block;
     margin: 0 auto;
-    width: 50vw;
+    max-width: 50vw;
   }
 
   .nav ul {
@@ -225,7 +230,7 @@ aside:last-of-type p {
     display: block;
     margin: 1rem 3rem;
     text-align: center;
-    width: fit-content;
+    max-width: fit-content;
     padding: 1rem 3rem;
     font-size: 1.6rem;
     font-weight: 500;
@@ -243,13 +248,11 @@ aside:last-of-type p {
   .left-aside {
     padding: 0;
     margin: 0;
-    width: 30%;
+    max-width: 30%;
     float: left;
   }
 
   .left-aside p.left-aside-title {
-    /* padding: 2rem auto 0.5rem auto; */
-    /* color: red; */
     margin: 3rem 0 0 0;
     font-size: 1.4rem;
     font-weight: 700;
@@ -257,12 +260,12 @@ aside:last-of-type p {
 
   form input {
     float: left;
-    width: 70%;
+    max-width: 70%;
   }
 
   form button {
     float: right;
-    width: 30%;
+    max-width: 30%;
     padding: 0.65rem;
     font-size: 1.8rem;
     font-weight: 400;
@@ -274,7 +277,66 @@ aside:last-of-type p {
   }
 
   .hero {
-    width: 50%;
+    max-width: 50%;
     float: right;
+    margin-top: 3rem;
+  }
+
+  .feature {
+    clear: both;
+    float: left;
+    display: block;
+    padding-left: 18rem;
+    padding-bottom: 5rem;
+  }
+
+  .feature section {
+    max-width: 25%;
+    float: left;
+    padding-right: 5rem;
+  }
+
+  .feature i {
+    font-size: 24px;
+    padding: 1rem 0;
+  }
+
+  .feature h4 {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+  }
+
+  .feature p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+
+  .feature a {
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  .info {
+    display: block;
+    max-width: 100%;
+    float: left;
+    clear: both;
+    padding: 6rem 10rem 10rem 10rem;
+    background-color: white;
+  }
+
+  .info h3 {
+    max-width: 50%;
+    padding-left: 7.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .info p {
+    max-width: 50%;
+    padding-left: 7.5rem;
+    font-size: 1.6rem;
+    color: #576b7e;
   }
 }
