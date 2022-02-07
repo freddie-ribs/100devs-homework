@@ -37,6 +37,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 /* A elements that don't have a class get default styles */
@@ -166,16 +168,6 @@ aside:last-of-type p {
   margin: 0 1.2rem 3rem 1.2rem;
   font-size: 1.8rem;
   font-weight: 400;
-}
-
-.hero {
-  position: relative;
-}
-
-.hero img {
-  position: absolute;
-  top: 0;
-  left: 1.2rem;
 }
 
 .feature,
