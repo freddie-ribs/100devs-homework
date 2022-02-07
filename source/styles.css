@@ -98,6 +98,10 @@ header {
   display: none;
 }
 
+.btn {
+  display: none;
+}
+
 .menu {
   position: absolute;
   top: 5px;
@@ -153,7 +157,7 @@ input {
   font-weight: 500;
 }
 
-.left-aside button {
+form button {
   border: none;
   text-align: center;
   width: 100%;
@@ -170,7 +174,107 @@ aside:last-of-type p {
   font-weight: 400;
 }
 
+.hero {
+  padding-bottom: 5rem;
+}
+
 .feature,
 .info {
   display: none;
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1500px) {
+  header {
+    position: static;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+    margin: 0 auto;
+    width: 50vw;
+  }
+
+  .nav ul {
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav ul li {
+    padding: 2rem;
+    display: inline-block;
+    list-style: none;
+  }
+
+  .nav ul li a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--clr-dark);
+  }
+
+  h2 {
+    float: left;
+    padding: 0rem 2rem;
+    margin-left: 3rem;
+  }
+
+  .btn {
+    display: block;
+    margin: 1rem 3rem;
+    text-align: center;
+    width: fit-content;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+    background: var(--clr-dark);
+    text-decoration: none;
+    float: right;
+  }
+
+  .divider {
+    clear: both;
+    display: none;
+  }
+
+  .left-aside {
+    padding: 0;
+    margin: 0;
+    width: 30%;
+    float: left;
+  }
+
+  .left-aside p.left-aside-title {
+    /* padding: 2rem auto 0.5rem auto; */
+    /* color: red; */
+    margin: 3rem 0 0 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  form input {
+    float: left;
+    width: 70%;
+  }
+
+  form button {
+    float: right;
+    width: 30%;
+    padding: 0.65rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .left-aside p {
+    clear: both;
+  }
+
+  .hero {
+    width: 50%;
+    float: right;
+  }
 }
