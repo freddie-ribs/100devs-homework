@@ -1,0 +1,43 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html {
+  /* font-size: 62.5%; */
+}
+
+body {
+  /* overflow-x: hidden; */
+}
+
+.container {
+  overflow-x: hidden;
+  max-width: 1600px;
+  height: 100vh;
+}
+
+.top-bg {
+  position: relative;
+  width: 125%;
+  height: 100%;
+  top: -25%;
+  left: -25%;
+  background: linear-gradient(to right, #131826, #1e2635, #171e2b);
+  transform: rotate(-7deg) translate(15%);
+  z-index: -1;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
