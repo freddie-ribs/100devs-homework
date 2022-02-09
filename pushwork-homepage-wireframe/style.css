@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap");
+
 body,
 h1,
 h2,
@@ -11,33 +13,89 @@ dd {
   margin: 0;
 }
 
-html {
-  /* font-size: 62.5%; */
+* {
+  box-sizing: border-box;
 }
 
-body {
-  /* overflow-x: hidden; */
+html {
+  font-size: 62.5%;
+  font-family: "Titillium Web", sans-serif;
 }
 
 .container {
+  position: relative;
   overflow-x: hidden;
   max-width: 1600px;
   height: 100vh;
 }
 
+@media screen and (min-width: 1601px) {
+  .container {
+    margin: 0 auto;
+  }
+}
+
 .top-bg {
-  position: relative;
+  position: absolute;
+  top: -25%;
+  left: -35%;
   width: 125%;
   height: 100%;
-  top: -25%;
-  left: -25%;
   background: linear-gradient(to right, #131826, #1e2635, #171e2b);
   transform: rotate(-7deg) translate(15%);
   z-index: -1;
 }
 
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 7rem;
+  margin-bottom: 6rem;
+  border: 1px solid white;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid white;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul a {
+  margin: 0 2.5rem;
+  color: #898d95;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#signup {
+  background-color: #3a404e;
+  color: white;
+  border-radius: 5px;
+  padding: 1rem 3rem;
+}
+
+#signup:hover {
+  background-color: #dee0e9;
+  color: #131826;
+}
+
+ul a:hover {
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: white;
+  font-weight: 300;
 }
