@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap");
 
+:root {
+  --text-clr: #898d95;
+  --text-clr-dark: #131826;
+}
+
 body,
 h1,
 h2,
@@ -15,6 +20,10 @@ dd {
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {
@@ -51,7 +60,7 @@ header {
   align-items: center;
   padding: 3rem 7rem;
   margin-bottom: 6rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 .menu {
@@ -73,9 +82,8 @@ ul {
 
 ul a {
   margin: 0 2.5rem;
-  color: #898d95;
+  color: var(--text-clr);
   text-transform: uppercase;
-  text-decoration: none;
   font-size: 1.2rem;
   font-weight: 400;
 }
@@ -100,6 +108,67 @@ ul a:hover {
   font-size: 3rem;
   color: white;
   font-weight: 300;
+}
+
+/* HERO SECTION FOR DESKTOP */
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid white; */
+  padding: 3rem 7rem;
+}
+
+.hero-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid cyan; */
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 2rem;
+  color: var(--text-clr);
+  margin-bottom: 5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.order-btn {
+  margin-right: 5rem;
+  padding: 1rem 5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-clr-dark);
+  background-color: white;
+  border-radius: 5px;
+}
+
+.angle-btn {
+  display: flex;
+  align-items: center;
+}
+
+.angle-btn i {
+  color: var(--text-clr);
+  font-size: 1.4rem;
+  margin-right: 2rem;
+}
+
+.angle-btn a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
 }
 
 /* HEADER FOR SMALLER TABLETS AND MOBILES */
