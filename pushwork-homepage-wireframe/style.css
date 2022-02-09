@@ -22,17 +22,14 @@ html {
   font-family: "Titillium Web", sans-serif;
 }
 
+/* HEADER FOR DESKTOP */
+
 .container {
   position: relative;
   overflow-x: hidden;
   max-width: 1600px;
   height: 100vh;
-}
-
-@media screen and (min-width: 1601px) {
-  .container {
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 }
 
 .top-bg {
@@ -47,13 +44,18 @@ html {
 }
 
 header {
-  width: 100vw;
+  /* width: 100vw; */
+  max-width: 1600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3rem 7rem;
   margin-bottom: 6rem;
   border: 1px solid white;
+}
+
+.menu {
+  display: none;
 }
 
 .logo {
@@ -98,4 +100,23 @@ ul a:hover {
   font-size: 3rem;
   color: white;
   font-weight: 300;
+}
+
+/* HEADER FOR SMALLER TABLETS AND MOBILES */
+
+@media screen and (max-width: 901px) {
+  .top-bg {
+    width: 150%;
+    left: -50%;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    font-size: 2rem;
+    color: white;
+  }
 }
