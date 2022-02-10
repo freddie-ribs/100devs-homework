@@ -37,16 +37,15 @@ html {
   position: relative;
   overflow-x: hidden;
   max-width: 1600px;
-  height: 135rem;
   margin: 0 auto;
 }
 
 .top-bg {
   position: absolute;
-  top: -58%;
+  top: -60%;
   left: -35%;
   width: 125%;
-  height: 100%;
+  height: 145rem;
   background: linear-gradient(to right, #131826, #1e2635, #171e2b);
   transform: rotate(-7deg) translate(15%);
   z-index: -1;
@@ -210,6 +209,7 @@ ul a:hover {
   justify-content: flex-end;
   align-items: center;
   padding: 0 3rem;
+  margin-bottom: 6rem;
 }
 
 .companies-logos img {
@@ -243,15 +243,17 @@ ul a:hover {
 
 .product-info {
   display: flex;
-  /* flex-wrap: wrap; */
-  padding: 4rem 3rem;
+  /* padding: 4rem 3rem; */
+  justify-content: space-between;
+  margin-bottom: 3rem;
 }
 
 .product-text {
-  width: 50%;
+  width: 45%;
+  margin-right: 6rem;
   display: flex;
   flex-direction: column;
-  padding: 0 4rem;
+  padding: 3rem 4rem 0 6rem;
 }
 
 .product-text h4 {
@@ -293,15 +295,57 @@ ul a:hover {
 
 .product-cards {
   width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  /* border: 1px solid red; */
+  margin: 0 2rem 4rem 2rem;
+  align-items: flex-start;
+}
+
+.card-img {
+  width: 100%;
+  height: 18rem;
+  background-color: var(--text-clr-dark);
+  border-radius: 5px 5px 0 0;
+}
+
+.card-text {
+  width: 100%;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 3px 11px 31px -13px rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 0 0 5px 5px;
+}
+
+.card-text h4 {
+  font-size: 1.2rem;
+}
+
+.card-text p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-clr);
 }
 
 /* HEADER FOR SMALLER TABLETS AND MOBILES */
 
 @media screen and (max-width: 900px) {
   .top-bg {
-    height: 130%;
-    width: 150%;
-    left: -53%;
+    height: 100%;
+    width: 175%;
+    left: -95%;
   }
 
   nav ul {
@@ -363,7 +407,7 @@ ul a:hover {
 
 @media screen and (min-width: 901px) and (max-width: 1175px) {
   .top-bg {
-    height: 108%;
+    height: 165rem;
   }
 
   .companies-logos {
