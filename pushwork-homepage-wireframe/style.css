@@ -38,13 +38,15 @@ html {
   overflow-x: hidden;
   max-width: 1600px;
   margin: 0 auto;
+  padding: 0 5rem;
 }
 
 .top-bg {
   width: 100%;
   height: 50%;
   position: absolute;
-  top: -15%;
+  top: -22%;
+  left: 0;
   transform: skewY(-10deg);
   z-index: -1;
   background: linear-gradient(to right, #131826, #1e2635, #171e2b);
@@ -55,7 +57,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 7rem;
+  padding: 3rem 0;
   margin-bottom: 6rem;
 }
 
@@ -112,7 +114,7 @@ ul a:hover {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 3rem 7rem;
+  padding: 3rem 0;
   margin-bottom: 12rem;
 }
 
@@ -207,12 +209,10 @@ ul a:hover {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 3rem;
   margin-bottom: 6rem;
 }
 
 .companies-logos img {
-  color: gray;
   height: 25%;
   filter: grayscale();
   padding-right: 5rem;
@@ -242,6 +242,7 @@ ul a:hover {
 
 .product-info {
   display: flex;
+  width: 100%;
   margin-bottom: 3rem;
 }
 
@@ -249,7 +250,6 @@ ul a:hover {
   width: 40%;
   display: flex;
   flex-direction: column;
-  padding: 3rem 0rem 0 6rem;
 }
 
 .product-text h4 {
@@ -300,21 +300,21 @@ ul a:hover {
 .card {
   display: flex;
   flex-direction: column;
-  width: 22rem;
+  width: 20rem;
   max-width: 50%;
   margin: 0 2rem 4rem 4rem;
   align-items: flex-end;
 }
 
 .card-img {
-  width: 22rem;
-  height: 18rem;
+  width: 20rem;
+  height: 16rem;
   background-color: var(--text-clr-dark);
   border-radius: 5px 5px 0 0;
 }
 
 .card-text {
-  width: 22rem;
+  width: 20rem;
   height: 8rem;
   max-height: fit-content;
   display: flex;
@@ -336,7 +336,24 @@ ul a:hover {
   color: var(--text-clr);
 }
 
-@media screen and (min-width: 951px) and (max-width: 1119px) {
+.product-advertising {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.product-advertising-img {
+  width: 50rem;
+  background-color: #dee0e9;
+  border-radius: 10px;
+}
+
+.product-advertising-text {
+  margin-right: 10rem;
+}
+
+@media screen and (min-width: 976px) and (max-width: 1119px) {
   .top-bg {
     top: -12%;
   }
@@ -348,11 +365,15 @@ ul a:hover {
   .product-cards {
     width: 60%;
   }
+
+  .product-advertising-text {
+    margin-right: 0;
+  }
 }
 
 /* MEDIA QUERIES FOR MOBILE AND TABLET */
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 975px) {
   /* HEADER FOR SMALLER TABLETS AND MOBILES */
 
   .top-bg {
@@ -436,11 +457,36 @@ ul a:hover {
     justify-content: center;
     flex-direction: row;
   }
+
+  .product-advertising {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .product-advertising-img {
+    height: 50rem;
+    width: 50rem;
+  }
+
+  .product-advertising-text {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 620px) {
+  .top-bg {
+    height: 40%;
+  }
+
   .product-cards {
     flex-direction: column;
     width: 100%;
+  }
+
+  .product-advertising-img {
+    height: 35rem;
+    width: 35rem;
   }
 }
