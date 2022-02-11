@@ -45,7 +45,7 @@ html {
   width: 100%;
   height: 50%;
   position: absolute;
-  top: -22%;
+  top: -30%;
   left: 0;
   transform: skewY(-10deg);
   z-index: -1;
@@ -243,7 +243,7 @@ ul a:hover {
 .product-info {
   display: flex;
   width: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 15rem;
 }
 
 .product-text {
@@ -340,17 +340,68 @@ ul a:hover {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5rem;
+  margin-bottom: 15rem;
 }
 
 .product-advertising-img {
   width: 50rem;
+  height: 50rem;
   background-color: #dee0e9;
   border-radius: 10px;
 }
 
 .product-advertising-text {
   margin-right: 10rem;
+}
+
+.info {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.square-box-container {
+  display: flex;
+}
+
+.square-box {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 2rem;
+  color: white;
+  border: 2px solid var(--text-clr-dark);
+  border-radius: 3px;
+}
+
+.square-box-text h4 {
+  font-size: 1.4rem;
+  color: var(--text-clr-dark);
+}
+
+.square-box-text p {
+  margin-bottom: 0rem;
+  color: red;
+}
+
+.circles {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+}
+
+.arrow-circle {
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid var(--text-clr-dark);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-circle span {
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 976px) and (max-width: 1119px) {
@@ -369,6 +420,11 @@ ul a:hover {
   .product-advertising-text {
     margin-right: 0;
   }
+}
+
+.solo-btn {
+  display: flex;
+  margin: 0 auto 5rem auto;
 }
 
 /* MEDIA QUERIES FOR MOBILE AND TABLET */
