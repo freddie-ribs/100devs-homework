@@ -242,17 +242,14 @@ ul a:hover {
 
 .product-info {
   display: flex;
-  /* padding: 4rem 3rem; */
-  justify-content: space-between;
   margin-bottom: 3rem;
 }
 
 .product-text {
-  width: 45%;
-  margin-right: 6rem;
+  width: 40%;
   display: flex;
   flex-direction: column;
-  padding: 3rem 4rem 0 6rem;
+  padding: 3rem 0rem 0 6rem;
 }
 
 .product-text h4 {
@@ -297,27 +294,28 @@ ul a:hover {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 35%;
-  /* border: 1px solid red; */
-  margin: 0 2rem 4rem 2rem;
-  align-items: flex-start;
+  width: 22rem;
+  max-width: 50%;
+  margin: 0 2rem 4rem 4rem;
+  align-items: flex-end;
 }
 
 .card-img {
-  width: 100%;
+  width: 22rem;
   height: 18rem;
   background-color: var(--text-clr-dark);
   border-radius: 5px 5px 0 0;
 }
 
 .card-text {
-  width: 100%;
+  width: 22rem;
+  height: 8rem;
   max-height: fit-content;
   display: flex;
   flex-direction: column;
@@ -338,9 +336,25 @@ ul a:hover {
   color: var(--text-clr);
 }
 
-/* HEADER FOR SMALLER TABLETS AND MOBILES */
+@media screen and (min-width: 951px) and (max-width: 1119px) {
+  .top-bg {
+    top: -12%;
+  }
+
+  .product-text {
+    width: 40%;
+  }
+
+  .product-cards {
+    width: 60%;
+  }
+}
+
+/* MEDIA QUERIES FOR MOBILE AND TABLET */
 
 @media screen and (max-width: 950px) {
+  /* HEADER FOR SMALLER TABLETS AND MOBILES */
+
   .top-bg {
     top: -20%;
   }
@@ -362,6 +376,7 @@ ul a:hover {
 
   .hero-content {
     width: 100%;
+    text-align: center;
   }
 
   .hero-buttons {
@@ -398,20 +413,34 @@ ul a:hover {
     padding-right: 0;
     padding: 0 1rem;
   }
-}
 
-/* BACKGROUND OVERLAY FIX TO LOOK GOOD ON MOBILE AND SCREEN SIZES */
-
-@media screen and (min-width: 951px) and (max-width: 1175px) {
-  /* .top-bg {
-    height: 165rem;
-  } */
-
-  .companies-logos {
-    padding: 0;
+  .product-info {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .companies-logos img {
-    padding-right: 3rem;
+  .product-text {
+    width: 100%;
+    text-align: center;
+    padding: 4rem 5rem 0 5rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+
+  .order-btn-dark {
+    margin: 0 auto;
+  }
+
+  .product-cards {
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .product-cards {
+    flex-direction: column;
+    width: 100%;
   }
 }
