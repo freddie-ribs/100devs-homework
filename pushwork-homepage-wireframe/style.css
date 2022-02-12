@@ -3,6 +3,7 @@
 :root {
   --text-clr: #898d95;
   --text-clr-dark: #131826;
+  --gradient: linear-gradient(to right, #131826, #1e2635, #171e2b);
 }
 
 body,
@@ -374,6 +375,10 @@ ul a:hover {
   border-radius: 3px;
 }
 
+.square-box-text {
+  height: fit-content;
+}
+
 .square-box-text h4 {
   font-size: 1.4rem;
   color: var(--text-clr-dark);
@@ -381,7 +386,6 @@ ul a:hover {
 
 .square-box-text p {
   margin-bottom: 0rem;
-  color: red;
 }
 
 .circles {
@@ -404,6 +408,16 @@ ul a:hover {
   font-size: 1.5rem;
 }
 
+.solo-btn {
+  display: flex;
+  margin: 0 auto 5rem auto;
+}
+
+.solo-create-acc {
+  width: 25rem;
+  margin-bottom: 10rem;
+}
+
 @media screen and (min-width: 976px) and (max-width: 1119px) {
   .top-bg {
     top: -12%;
@@ -420,11 +434,6 @@ ul a:hover {
   .product-advertising-text {
     margin-right: 0;
   }
-}
-
-.solo-btn {
-  display: flex;
-  margin: 0 auto 5rem auto;
 }
 
 /* MEDIA QUERIES FOR MOBILE AND TABLET */
