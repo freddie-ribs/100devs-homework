@@ -360,6 +360,7 @@ h4 {
 
 .opening-hours {
   padding: 5rem 3rem;
+  margin-bottom: 2rem;
 }
 
 .opening-hours h4 {
@@ -404,4 +405,115 @@ h4 {
   font-size: 4rem;
   color: #ff8800;
   text-align: center;
+}
+
+.hours-container {
+  margin: 0 auto;
+  width: 80rem;
+}
+
+.hours-monfri {
+  float: right;
+  font-size: 1.2rem;
+}
+
+.hours-container h5 {
+  font-family: "El Messiri", sans-serif;
+  font-size: 3rem;
+}
+
+.hours-weekend {
+  float: left;
+  font-size: 1.2rem;
+}
+
+.video {
+  position: relative;
+  overflow: hidden;
+  padding-top: 2rem;
+  clear: both;
+  margin: 0 auto;
+}
+
+.video-img-container {
+  margin: 0 auto;
+  position: relative;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #ff8800;
+  color: #ff8800;
+}
+
+.play-btn i {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-img {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  height: 30rem;
+  background: url("/images/fruit-bowl.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 4rem;
+}
+
+.testimonials {
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  text-align: center;
+  background-color: #f2f6f7;
+  padding-top: 4rem;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-family: "El Messiri", sans-serif;
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.testimonials img {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.occupation {
+  font-size: 1rem;
+  color: lightgray;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: #ff8800;
+  margin-bottom: 1rem;
+}
+
+.testimonials p {
+  overflow: hidden;
+  max-width: 40rem;
+  margin: 0 auto 1rem auto;
+}
+
+.testimonials .radio-btns {
+  margin-bottom: 1rem;
 }
