@@ -25,6 +25,7 @@ body {
 html {
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
+  color: #0d0d25;
 }
 
 /*
@@ -71,7 +72,7 @@ h6 {
 
 .container {
   position: relative;
-  height: 70rem;
+  /* height: 60rem; */
   overflow: hidden;
   max-width: 1600px;
   margin: 0 auto;
@@ -105,8 +106,9 @@ header ul li {
 }
 
 header ul li a {
+  color: #0d0d25;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .intro-container {
@@ -164,8 +166,90 @@ form a {
   width: 25%;
 }
 
-.social-media span {
+.social-media a {
   padding-right: 4rem;
   font-size: 1.2rem;
   color: #ff8800;
+}
+
+.about-us {
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 50rem;
+  overflow-x: hidden;
+}
+
+.about-us-img-left {
+  position: relative;
+  top: 0;
+  left: -2rem;
+  float: left;
+  width: 33.3333%;
+  height: 100%;
+  background: linear-gradient(
+      -90deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.01)
+    ),
+    url("/images/pastry.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-us-info {
+  position: relative;
+  float: left;
+  width: 40%;
+  padding-top: 5rem;
+}
+
+.about-us-info h4 {
+  color: #ff8800;
+}
+
+.about-us-info h2 {
+  margin-bottom: 3rem;
+  font-family: "El Messiri", sans-serif;
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.about-us-info p {
+  width: 115%;
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+}
+
+.about-us-img-right {
+  float: left;
+  width: 26.6666%;
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.01)
+    ),
+    url("/images/oatmeal.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btn {
+  color: white;
+  padding: 1.2rem;
+  background-color: #ff8800;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.btn-arrow {
+  color: white;
+  padding: 1.2rem;
+  background-color: #ff8800;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.about-us i {
+  transform: rotate(-90deg);
 }
