@@ -257,23 +257,92 @@ aside > a {
   margin-top: 1rem;
 }
 
-/* .arrows {
-  background-color: #fff;
+.arrows :nth-child(1) i {
+  position: absolute;
+}
+
+.services-container {
+  clear: both;
+  padding: 2rem 10rem 0 15rem;
+  text-align: center;
+}
+
+.services-container > div {
+  width: 33.3333%;
+  float: left;
+  padding: 0 5rem;
+  margin-bottom: 8rem;
+}
+
+.services-section div i {
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.video-container {
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  height: 40rem;
+  background: rgb(241, 246, 252);
+  padding-top: 10rem;
+}
+
+.video-left {
+  float: left;
+  width: 45%;
+  padding-left: 20rem;
+}
+
+.video-left h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  padding-bottom: 2rem;
+}
+
+.video-left p {
+  padding-bottom: 3rem;
+}
+
+.video-left a {
+  padding: 1rem 1.7rem;
+  background: #000;
+  color: white;
+}
+
+.video-right {
+  width: 45%;
+  padding-right: 20rem;
+  float: right;
+  height: 100%;
+}
+
+.video-bg {
+  position: relative;
+  background: url("/pompadour.jpg");
+  height: 75%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.play-btn {
+  position: absolute;
   height: 5rem;
   width: 5rem;
-  position: absolute;
-  bottom: 10%;
-  right: 10%;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
 }
 
-.arrows :nth-child(1) i {
+.play-btn i {
   position: absolute;
+  height: 5rem;
+  width: 5rem;
+  color: white;
+  font-size: 1.5rem;
   top: 35%;
-  left: 35%;
-  font-size: 1.4rem;
-} */
-
-.arrows :nth-child(1) i {
-  position: absolute;
+  left: 40%;
 }
+/* MEDIA */
