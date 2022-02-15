@@ -139,6 +139,10 @@ input {
   border-radius: 5px;
 }
 
+input::placeholder {
+  color: rgb(24, 101, 242);
+}
+
 main {
   /* border: 1px solid red; */
 }
