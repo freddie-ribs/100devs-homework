@@ -77,6 +77,11 @@ select {
   }
 }
 
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 :root {
   --clr-light: #f5f9fc;
   --clr-dark: rgb(48, 70, 89);
