@@ -81,6 +81,10 @@ main {
   padding-right: 1rem;
 }
 
+header {
+  display: none;
+}
+
 .extra-crunch-text {
   color: rgb(253, 192, 6);
   font-size: 1.7rem;
@@ -189,4 +193,112 @@ section div {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 1050px) {
+  nav {
+    display: none;
+  }
+
+  header {
+    display: block;
+    width: 100%;
+    height: 10%;
+  }
+
+  header img {
+    float: left;
+    max-width: 100%;
+    height: 60%;
+    object-fit: cover;
+    padding-left: 3rem;
+  }
+
+  .menu {
+    float: right;
+    color: rgb(20, 150, 20);
+    font-size: 2.5rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+  }
+
+  .extra-crunch-text {
+    display: none;
+  }
+
+  main {
+    padding-left: 3rem;
+    width: 50%;
+    height: 50%;
+  }
+
+  main img {
+    height: 50%;
+    object-fit: cover;
+  }
+
+  aside {
+    width: 50%;
+    height: 50%;
+  }
+
+  .L h4 {
+    font-size: 1.8rem;
+  }
+
+  .R img {
+    height: 50%;
+    padding-left: 1.5rem;
+  }
+
+  body > section {
+    padding-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  header {
+    height: 7.5%;
+  }
+
+  main {
+    float: none;
+    width: 100%;
+    height: 40%;
+  }
+
+  main h4 {
+    display: none;
+  }
+
+  aside {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+
+  aside {
+    padding: 0 3rem;
+  }
+
+  .divider {
+    padding: 0;
+  }
+
+  .L {
+    width: 66.66%;
+  }
+
+  .M {
+    display: none;
+  }
+
+  .R {
+    width: 33.33%;
+  }
+
+  .R img {
+    height: 33.33%;
+    width: 100%;
+  }
 }
