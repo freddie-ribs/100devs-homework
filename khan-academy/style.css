@@ -143,10 +143,6 @@ input::placeholder {
   color: rgb(24, 101, 242);
 }
 
-main {
-  /* border: 1px solid red; */
-}
-
 aside {
   float: left;
   width: 50%;
@@ -192,4 +188,61 @@ section a {
 
 section ul {
   padding-left: 0;
+  height: 10rem;
+}
+
+@media screen and (max-width: 950px) {
+  header .left a {
+    display: none;
+  }
+
+  nav {
+    padding: 1.5rem 0;
+  }
+
+  .left input {
+    width: 50%;
+    margin: 0;
+    margin-right: 1rem;
+    float: left;
+  }
+
+  #logo {
+    display: block;
+    float: right;
+    right: 0;
+    left: unset;
+  }
+
+  header .right {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  aside {
+    float: none;
+    width: 100%;
+    margin-left: 0 auto;
+  }
+
+  .img {
+    background-size: cover;
+  }
+
+  section {
+    float: none;
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  section h1 {
+    padding-bottom: 2rem;
+  }
+
+  section p {
+    line-height: 1;
+  }
 }
