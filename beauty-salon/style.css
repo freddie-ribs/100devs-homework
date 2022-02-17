@@ -1,55 +1,40 @@
-/* Box sizing rules */
-*,
+* *,
 *::before,
 *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
   box-sizing: border-box;
 }
 
-/* Remove default margin */
 body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
+html {
+  height: 100%;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
   list-style: none;
 }
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
@@ -57,131 +42,133 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-li {
-  list-style: none;
+.first-page-container {
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid black; */
 }
 
 header {
-  padding: 1.5rem 0;
+  height: 10%;
+  width: 100%;
 }
 
-header nav * {
+.logo {
+  float: left;
+  height: 100%;
+  width: 15%;
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
+  padding-left: 2.5rem;
+}
+
+.logo a {
+  color: black;
+}
+
+main ul {
+  float: left;
+  height: 100%;
+  width: 70%;
+}
+
+main ul li {
   float: left;
 }
 
-header nav ul {
-  text-align: center;
-  width: 60%;
-  margin: 0 auto;
-  padding: 0;
-}
-
-header nav ul li {
-  float: left;
-  padding: 1rem;
-}
-
-header nav ul li a {
+main ul li a {
   display: block;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  padding: 2.5rem;
+  color: black;
 }
 
-header nav h2 {
-  width: 20%;
-  font-size: 2rem;
+main ul li a i {
+  color: black;
 }
 
-header nav > a {
-  padding: 1rem;
-  text-align: center;
-  width: 20%;
-  margin: 0 auto;
-  font-size: 1.3rem;
-  font-weight: 00;
+header .btn-white {
+  float: left;
+  height: 100%;
+  width: 15%;
+  font-size: 1.4rem;
+  padding: 2.5rem;
+  color: black;
+}
+
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 1095px) {
+  header ul {
+    padding-left: 3.5rem;
+  }
+
+  header ul li a,
+  .btn-white {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  header ul {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    float: right;
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  .btn-white {
+    display: none;
+  }
 }
 
 .hero {
-  position: relative;
-  clear: both;
+  height: 90%;
+  background-image: url("/hero.jpg");
+  background-position: top;
+  background-size: cover;
   width: 100%;
-  height: 70rem;
+  border-radius: 0 0 15% 55%;
 }
 
-.hero-img {
-  position: relative;
-  background: url("/hero.jpg");
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: -1;
-  border-radius: 0 0 25% 55%;
-}
-
-aside {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 85%;
+.landing-left {
   float: left;
-  padding-top: 15rem;
+  height: 100%;
+  width: 85%;
   padding-left: 10rem;
+  padding-top: 10rem;
 }
 
-.time {
-  width: 2%;
-  writing-mode: vertical-lr;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.arrows {
+  float: left;
+  height: 100%;
+  width: 10%;
+  border: 1px solid blue;
 }
 
 h1 {
   font-size: 7rem;
   color: white;
   padding-bottom: 2rem;
-  font-weight: 500;
+  font-weight: 100;
   letter-spacing: 0.5rem;
   line-height: 1.2;
 }
 
-aside h4 {
+.landing-left h4 {
   padding-bottom: 3rem;
   font-weight: 500;
   font-size: 1.4rem;
   color: white;
 }
 
-aside > a {
+.btn-left {
   display: block;
   width: fit-content;
   color: white;
@@ -214,21 +201,11 @@ aside > a {
   background-color: white;
 }
 
-.time {
-  color: white;
-  top: 0;
-  right: 0;
-  padding-top: 15rem;
-  letter-spacing: 0.2rem;
-  font-weight: 600;
-}
-
 .arrows-container {
-  position: absolute;
-  right: 5%;
-  bottom: 10%;
-  height: 5;
-  width: 7rem;
+  float: left;
+  height: 100%;
+  width: 10%;
+  padding-top: 40%;
 }
 
 .arrow-left {
@@ -237,6 +214,7 @@ aside > a {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
+  margin-left: 2.5rem;
   text-align: center;
 }
 
@@ -257,21 +235,78 @@ aside > a {
   margin-top: 1rem;
 }
 
-.arrows :nth-child(1) i {
-  position: absolute;
+.time {
+  float: left;
+  height: 100%;
+  width: 5%;
+  writing-mode: vertical-lr;
+  padding-left: 3rem;
+}
+
+.time p {
+  color: white;
+  top: 0;
+  right: 0;
+  padding-top: 15rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 875px) {
+  .landing-left {
+    width: 95%;
+  }
+
+  .arrows-container {
+    display: none;
+  }
+
+  .time {
+    padding-left: 1rem;
+  }
+
+  .hero {
+    background-position: top;
+  }
+
+  .landing-left h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .time {
+    display: none;
+  }
+
+  .landing-left {
+    float: none;
+    width: 100%;
+    padding-left: 3rem;
+  }
+
+  .hero {
+    background-position: top;
+  }
 }
 
 .services-container {
-  clear: both;
-  padding: 2rem 10rem 0 15rem;
+  padding: 4rem 0rem 0 0%;
   text-align: center;
+  height: 30%;
+  margin: 2rem auto;
+  width: 70%;
 }
 
 .services-container > div {
   width: 33.3333%;
   float: left;
   padding: 0 5rem;
-  margin-bottom: 8rem;
+}
+
+.services-container h3 {
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
 }
 
 .services-section div i {
@@ -279,161 +314,292 @@ aside > a {
   padding-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 850px) {
+  .services-container > div {
+    width: 100%;
+    padding: 1rem 5rem;
+  }
+
+  .services-container p {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .services-container {
+    padding: 1rem 2rem;
+  }
+}
+
 .video-container {
-  width: 100%;
-  margin: 0 auto 5rem auto;
+  width: 70%;
+  margin: 0 auto;
   clear: both;
-  height: 40rem;
+  height: 40%;
   background: rgb(241, 246, 252);
-  padding-top: 10rem;
 }
 
 .video-left {
   float: left;
-  width: 45%;
-  padding-left: 20rem;
+  width: 50%;
+  height: 100%;
 }
 
 .video-left h2 {
-  font-size: 3rem;
+  padding-top: 2rem;
+  padding-left: 4rem;
+  font-size: 2.2rem;
   line-height: 1.2;
   padding-bottom: 2rem;
 }
 
 .video-left p {
+  width: 80%;
   padding-bottom: 3rem;
+  padding-left: 4rem;
 }
 
 .video-left a {
-  padding: 1rem 1.7rem;
+  padding: 1rem 2rem;
+  margin-left: 4rem;
   background: #000;
   color: white;
 }
 
 .video-right {
-  width: 45%;
-  padding-right: 20rem;
-  float: right;
-  height: 100%;
-}
-
-.video-bg {
-  position: relative;
+  float: left;
+  width: 40%;
+  height: 80%;
+  margin-top: 3%;
+  margin-left: 5%;
   background: url("/pompadour.jpg");
-  height: 75%;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .play-btn {
-  position: absolute;
   height: 5rem;
   width: 5rem;
   background-color: black;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 25%;
 }
 
 .play-btn i {
-  position: absolute;
   height: 5rem;
   width: 5rem;
   color: white;
   font-size: 1.5rem;
-  top: 35%;
-  left: 40%;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-top: 1.75rem;
 }
 
-/* .employees {
-  width: 100%;
-  border: 1px solid red;
-  height: 30rem;
-  padding: 0 5rem;
-  margin-bottom: 5rem;
+@media screen and (max-width: 850px) {
+  .video-container {
+    width: 100%;
+  }
+
+  .video-container p {
+    display: none;
+  }
 }
 
-.employees div {
-  width: 25rem;
-  border: 1px solid blue;
-  height: 100%;
+.hair-experts {
+  width: 70%;
+  height: 45rem;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+.hair-experts > div {
   float: left;
-  background: url("/alita.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-} */
-/* MEDIA */
-
-.employees {
-  clear: both;
-  padding: 2rem 10rem 0 15rem;
-  width: 100%;
-  height: 40rem;
-  margin-bottom: 10rem;
+  width: 33.3333%;
+  height: 75%;
 }
 
-.employees > div {
-  position: relative;
-  width: 29%;
-  float: left;
-  margin: 0 1rem;
-  background: url("/alita.jpg");
+.alita {
+  background-image: url("/alita.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
 }
 
-.employees :nth-child(2) {
-  background: url("/ayesha.jpg");
+.hair-experts :nth-child(2) {
+  background-image: url("/ayesha.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
-.employees :nth-child(3) {
-  background: url("/smith.jpg");
+.hair-experts :nth-child(3) {
+  background-image: url("/smith.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
-.name {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  height: 6rem;
+.hair-experts span {
+  display: block;
+  color: white;
+  font-weight: 200;
+  font-size: 1rem;
+  padding-top: 0.2rem;
+}
+
+.hair-experts h6 {
+  text-align: center;
+  padding-top: 1.5rem;
   background-color: black;
   color: white;
-  text-align: center;
-}
-
-.name p {
-  margin-top: 1.8rem;
-  font-size: 1.8rem;
-}
-
-.masonry-container {
-  position: relative;
-  width: 76%;
-  padding: 2rem;
-  columns: 3;
+  width: 90%;
+  height: 5rem;
+  font-size: 1rem;
   margin: 0 auto;
-  gap: 10px;
+  margin-top: 100%;
 }
 
-.image {
-  display: inline-block;
-  margin-bottom: 10px;
-  overflow: hidden;
+@media screen and (max-width: 850px) {
+  .hair-experts {
+    width: 100%;
+  }
+
+  .hair-experts p {
+    display: none;
+  }
+
+  .hair-experts > div {
+    float: left;
+    width: 33.3333%;
+    height: 90%;
+  }
 }
 
-.image img {
-  width: 100%;
-  object-fit: contain;
+@media screen and (max-width: 625px) {
+  .hair-experts h6 {
+    display: none;
+  }
 }
 
-.our-lookbook {
-  text-align: center;
+.offer {
+  margin: 0 auto;
+  width: 70%;
+  background-image: url("/hero.jpg");
+  height: 45%;
+  background-size: cover;
+  padding: 8rem 0 4rem 4rem;
+  margin-bottom: 6rem;
+}
+
+.offer h4 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.offer h2 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.offer span {
   font-size: 3rem;
+}
+
+.offer a {
+  color: white;
+  background-color: black;
+  padding: 1.5rem 2.5rem;
+}
+
+.lookbook {
+  text-align: center;
+  font-size: 2.5rem;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.gallery {
+  width: 70%;
+  margin: 0 auto;
+  height: 90%;
+}
+
+.gallery-left {
+  float: left;
+  height: 100%;
+  width: 33.3333%;
+}
+
+.gallery-mid {
+  float: left;
+  height: 100%;
+  width: 33.3333%;
+}
+
+.gallery-right {
+  float: left;
+  height: 100%;
+  width: 33.3333%;
+}
+
+.gallery .gallery-left .img-short {
+  float: left;
+  width: 97%;
+  height: 30%;
+  background-image: url("/hero.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.gallery-left .img-long {
+  float: left;
+  height: 66.66%;
+  width: 97%;
+  background-image: url("/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-top: 3.33%;
+}
+
+.gallery-mid .img-short {
+  float: left;
+  width: 100%;
+  height: 30%;
+  background-image: url("/hero.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.gallery-mid .img-long {
+  float: left;
+  height: 66.66%;
+  width: 100%;
+  background-image: url("/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-bottom: 3.33%;
+}
+
+.gallery-right .img-short {
+  float: left;
+  width: 97%;
+  height: 30%;
+  margin-left: 3%;
+  background-image: url("/hero.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.gallery-right .img-long {
+  float: left;
+  height: 66.66%;
+  width: 97%;
+  background-image: url("/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-top: 3.33%;
+  margin-left: 3%;
 }
